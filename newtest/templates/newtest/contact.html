@@ -1,0 +1,44 @@
+{% extends 'newtest/base.html' %}
+{% load static %}
+{% block content %}
+
+<div id = "map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7256.868753626795!2d73.72388089437062!3d24.574200993529548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967e5f5fabbc551%3A0x3f4a9a797e32ddef!2sShanti+Nagar%2C+Sector+3%2C+Udaipur%2C+Rajasthan!5e0!3m2!1sen!2sin!4v1498102207758" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+<div id = "contactus" >
+
+    <div class="col-md-4" id = "contact">
+                <h3>Contact Details</h3>
+                <p>
+                    Shanti Nagar Sector - 3 <br>
+                    Udaipur, Rajasthan <br>
+                    Near MDS School <br>
+                </p>
+                <p><i class="fa fa-phone"></i>
+                    <abbr title="Phone">P</abbr>: +91-8947987888</p>
+                <p><i class="fa fa-envelope-o"></i>
+                    <abbr title="Email">E</abbr>: <a href="mailto:name@example.com">contact@abc.com</a>
+                </p>
+                <p><i class="fa fa-clock-o"></i>
+                    <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM</p>
+    </div>
+
+    <div id = "message">
+
+        <h1>Or Write to Us!</h1>
+        <form role="form" action="" method="post">{% csrf_token %}
+            <p> Name: <br>{{ form.Name }}</p>
+            <p> Email: <br>{{ form.Email }}</p>
+            <p> Message: <br>{{ form.Message }}</p>
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
+
+</div>
+
+
+
+
+
+{% endblock %}

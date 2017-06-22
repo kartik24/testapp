@@ -1,0 +1,18 @@
+{% extends 'newtest/base.html' %}
+{% load static %}
+{% block content %}
+
+<div id = "reguser">
+    <form role="form" action="" method="post">{% csrf_token %}
+            <p> Name: <br>{{ form.Name }}</p>
+            <p> Email: <br>{{ form.Email }}</p>
+            <p> Password: <br>{{ form.Password }}</p>
+            <p> Number: <br>{{ form.Number }}</p>
+            <p> City: <br>{{ form.City }}</p>
+            <p> Country: <br>{{ form.Country }}</p>
+            <button type="submit">Submit</button>
+    </form>
+
+</div>
+
+{% endblock %}
